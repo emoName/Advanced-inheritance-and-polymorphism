@@ -36,6 +36,15 @@ namespace ConsoleApp1
 
 
     }
+    // bsket , fotball , volei
+
+    interface IGame
+    {
+         String GetScore();
+        String GetTeams();
+
+
+    }
 
 
 
