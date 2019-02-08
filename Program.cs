@@ -29,10 +29,19 @@ namespace ConsoleApp1
 
             basket.ShowPlayersAndTeams();
 
+            ShowGamesAndTeams(new List<IGame>(){ basket,fotball});
+
             Console.ReadLine();
 
         }
 
+        public static void ShowGamesAndTeams(List<IGame> games)
+        {
+            foreach (IGame g in games)
+            {
+                g.ShowPlayersAndTeams();
+            }
+        } 
 
     }
 }

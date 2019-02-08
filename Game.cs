@@ -48,6 +48,7 @@ namespace ConsoleApp1
          String GetTeams();
 
          void AddTeam(Team team);
+         void ShowPlayersAndTeams();
 
 
     }
@@ -124,7 +125,48 @@ namespace ConsoleApp1
 
         public string GetTeams()
         {
-            return $" {teams[0].TeamName} vs {teams[1].TeamName}";
+            switch (teams.Length)
+            {
+                case 2: return $" {teams[0].TeamName} vs {teams[1].TeamName}";
+                case 1: return $" {teams[0].TeamName}";
+                default : return "Is no any Teams in Game !!!";
+
+            }
+        }
+
+        //-----  Open Close ----- add Feature ------
+
+        public void ShowPlayersAndTeams()
+        {
+            try
+            {
+
+           
+            switch (teams.Length)
+            {
+                case 2:
+                    Console.WriteLine(teams[0].TeamName);
+                    teams[0].GetPlayers();
+
+                    Console.WriteLine(teams[1].TeamName);
+                    teams[1].GetPlayers();
+                    break;
+                case 1:
+                     Console.WriteLine(teams[0].TeamName);
+                     teams[0].GetPlayers();
+                    break;
+               default :
+                     Console.WriteLine( "Is no any Teams in Game !!!");
+                    break;
+
+            }
+
+            }
+            catch (NullReferenceException e)
+            {
+
+                
+            }
         }
     }
 
