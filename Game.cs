@@ -18,7 +18,7 @@ namespace ConsoleApp1
 
     class Team
     {
-        // Team
+       
         List<Player> player = new List<Player>() ;
         public String TeamName { get; set; }
 
@@ -50,9 +50,7 @@ namespace ConsoleApp1
 
     }
 
-   
-    // bsket , fotball , volei
-
+  
     class Basket :  IGame
     {
         private Team[] teams = new Team[2];
@@ -85,7 +83,7 @@ namespace ConsoleApp1
     }
 
 
-    class fotball : IGame
+    class Fotball : IGame
     {
         private int id = 0;
         private int team1Score = 0;
