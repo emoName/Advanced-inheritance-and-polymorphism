@@ -40,21 +40,26 @@ namespace ConsoleApp1
         }
     }
     
-    interface IGame
+    interface IGameShow
     {
        
 
          String GetScore();
          String GetTeams();
 
-         void AddTeam(Team team);
+        
          void ShowPlayersAndTeams();
 
 
     }
+  
+    interface IGameAdd
+    {
+         void AddTeam(Team team);
+    }
 
   
-    class Basket :  IGame
+    class Basket :  IGameShow, IGameAdd
     {
         private Team[] teams = new Team[2];
         private int id = 0;
@@ -98,7 +103,7 @@ namespace ConsoleApp1
     }
 
 
-    class Fotball : IGame
+    class Fotball : IGameShow, IGameAdd
     {
         private int id = 0;
         private int team1Score = 0;
@@ -168,8 +173,32 @@ namespace ConsoleApp1
                 
             }
         }
+
     }
 
+    // imaginatia level God  :)
+    // trying to implement Liskov :D
+
+    class SomeGame : IGameShow
+    {
+       
+
+        public string GetScore()
+        {
+            return "The score is : 5 ";
+        }
+
+        public string GetTeams()
+        {
+            return "is only one Team in this game : Demo";
+        }
+
+        public void ShowPlayersAndTeams()
+        {
+            Console.WriteLine("Team is : Demo ");
+            Console.WriteLine("You are only Player in this game");
+        }
+    }
 
 
 

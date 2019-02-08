@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
+            // no SOLID :)
          
             Basket basket = new Basket();
             Fotball fotball = new Fotball();
@@ -29,17 +29,21 @@ namespace ConsoleApp1
 
             basket.ShowPlayersAndTeams();
 
-            ShowGamesAndTeams(new List<IGame>(){ basket,fotball});
+
+            Console.WriteLine("\n -------------------------------------------------------- \n");
+
+            ShowGamesAndTeams(new List<IGameShow>(){ basket,fotball,new SomeGame()});
 
             Console.ReadLine();
 
         }
 
-        public static void ShowGamesAndTeams(List<IGame> games)
+        public static void ShowGamesAndTeams(List<IGameShow> games)
         {
-            foreach (IGame g in games)
+            foreach (IGameShow g in games)
             {
                 g.ShowPlayersAndTeams();
+                Console.WriteLine("\n -------------------------------------------------------- \n");
             }
         } 
 
