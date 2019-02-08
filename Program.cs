@@ -27,6 +27,8 @@ namespace ConsoleApp1
 
            Console.WriteLine( basket.GetTeams());
 
+            basket.ShowPlayersAndTeams();
+
             Console.ReadLine();
 
         }

@@ -29,10 +29,12 @@ namespace ConsoleApp1
         }
         public void GetPlayers()
         {
+            int i = 1;
             if (player.Count > 0)
                 foreach (Player p in player)
                 {
-                    Console.WriteLine($"Player Name : { p.Name}");
+                    Console.WriteLine($"Player {i} Name : { p.Name}");
+                    i++;
                 }
             else Console.WriteLine("Is no any plaers in the List !!!");
         }
@@ -80,6 +82,18 @@ namespace ConsoleApp1
         {
             return $" {teams[0].TeamName} vs {teams[1].TeamName}";
         }
+
+        //-----  Open Close ----- add Feature ------
+
+        public void ShowPlayersAndTeams()
+        {
+            Console.WriteLine(teams[0].TeamName);
+            teams[0].GetPlayers();
+
+            Console.WriteLine(teams[1].TeamName);
+            teams[1].GetPlayers();
+        } 
+
     }
 
 
