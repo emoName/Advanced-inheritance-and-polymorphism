@@ -190,12 +190,12 @@ namespace ConsoleApp1
 
         public string GetTeams()
         {
-            return "is only one Team in this game : Demo";
+            return " Demo  VS PC";
         }
 
         public void ShowPlayersAndTeams()
         {
-            Console.WriteLine("Team is : Demo ");
+            Console.WriteLine("Your Team is : Demo ");
             Console.WriteLine("You are only Player in this game");
         }
     }
