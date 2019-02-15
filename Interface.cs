@@ -20,23 +20,26 @@ namespace ConsoleApp1
         void AddPlayer(IPlayer p);
         void GetPlayers();
     }
-    // conform Liskov sar putea de impartit in 2 interfete {ITeamAdd : ITeamGet}
+    //  sar putea de impartit in 2 interfete {ITeamAdd : ITeamGet}
 
-    interface IGameShow
+    interface IGameShowInfo
     {
 
         String GetScore();
-        String GetTeams();
-        void ShowPlayersAndTeams();
+        // String ShowOponent();
+        string ShowOponent();
 
     }
 
-    interface IGameAdd
+    interface IGameAddTeam
     {
         void AddTeam(ITeam team);
     }
 
-
+    interface ITwoTeamsGame: IGameShowInfo
+    {
+        void ShowPlayersAndTeams();
+    }
 
 
 }
