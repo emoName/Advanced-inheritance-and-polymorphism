@@ -9,10 +9,10 @@ namespace Game
 {
 
 
-    class SingePlayerGame : IGameShowInfo
+  abstract  class SingePlayerGame : IGameShowInfo
     {
 
-
+       abstract public   void GameName();
         protected SingePlayerGame()
         {
             score = 0;
@@ -40,6 +40,8 @@ namespace Game
         protected int team1Score = 0;
         protected int team2Score = 0;
         private int id = 0;
+
+        abstract public void GameName();
         public virtual void AddTeam(ITeam team)
         {
             if (id < 2)

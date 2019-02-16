@@ -60,7 +60,10 @@ namespace ConsoleApp1
     class Basket : TwoTeamsGames
     {
 
-
+        public override void GameName()
+        {
+            Console.WriteLine("This Game name Is : Basket : ");
+        }
 
         //-----  Open Close ----- add Feature ------
         public override void ShowPlayersAndTeams()
@@ -81,7 +84,10 @@ namespace ConsoleApp1
 
         //-----  Open Close ----- add Feature ------
 
-
+        public override void GameName()
+        {
+            Console.WriteLine("This Game name Is : Fotball : ");
+        }
 
     }
 
@@ -93,8 +99,11 @@ namespace ConsoleApp1
 
     class SomeSinglePlayerGame  : SingePlayerGame
     {
-      
-     
+        public override void GameName()
+        {
+            Console.WriteLine("This Game name Is : SomeSinglePlayerGame : ");
+        }
+
     }
 
 

@@ -24,7 +24,7 @@ namespace ConsoleApp1
 
     interface IGameShowInfo
     {
-
+        void GameName();
         String GetScore();
         // String ShowOponent();
         string ShowOponent();
