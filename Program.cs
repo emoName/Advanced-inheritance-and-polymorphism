@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameOopC_;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,7 @@ namespace ConsoleApp1
             AddPlayerToTeam(player, team);
             AddPlayerToTeam(new Player() { Name = "Vasea" }, team);
             AddPlayerToTeam(new Player() { Name = "george" }, team);
+            team.AddPlayer(new Player() { Name = "Valentin" }).AddPlayer(new Player() { Name = "Jora" });
 
             AddTeamToGame(team, basket);
             AddTeamToGame(team, fotball);
@@ -29,6 +31,7 @@ namespace ConsoleApp1
             AddPlayerToTeam(new Player() { Name = "Nicu" }, team);
             AddPlayerToTeam(new Player() { Name = "Vasea" }, team);
             AddPlayerToTeam(player, team);
+            team.AddPlayer(new Player() { Name = "Valentin" }).AddPlayer(new Player() { Name = "Gicu" });
 
             AddTeamToGame(team, basket);
             AddTeamToGame(team, fotball);
@@ -37,6 +40,24 @@ namespace ConsoleApp1
             Console.WriteLine("\n -xxx------------------------------------------------------- \n");
             //  ShowGamesAndTeams(new List<IGameShowInfo>() { basket, fotball, someSinglePlayerGame });
             ShowTwoTeamGameInfo(new List<ITwoTeamsGame> { basket, fotball });
+
+            Console.WriteLine();
+            ////---experiment-------------------------------------------------------------------------------------------------------
+            //Order.Builder builder = new Order.Builder();
+            //builder.Bread("Wheat").Chees("America").Met("Ham").Met("Pui");
+
+            //Order order = builder.build();
+
+            //Console.WriteLine($"{order.bred} , {order.met} , {order.chees} .");
+            //            //----experiment-----------------------------------------------------------------------------------------------------------------------------
+
+            //            MyClass myClass = new MyClass();
+
+            //            myClass.SetA("aaaa").SetB("bbbb").SetC("cccc");
+            //            Console.WriteLine(myClass.GetAll());
+            ////-----------------------------------------------------------------------------------------------------------------------
+
+
 
             Console.ReadLine();
 

@@ -42,7 +42,7 @@ namespace Game
         private int id = 0;
 
         abstract public void GameName();
-        public virtual void AddTeam(ITeam team)
+        public virtual IGameAddTeam AddTeam(ITeam team)
         {
             if (id < 2)
             {
@@ -53,6 +53,7 @@ namespace Game
             {
                 Console.WriteLine("In game can be only 2 Teams !");
             }
+            return this;
         }
 
         public virtual string GetScore()

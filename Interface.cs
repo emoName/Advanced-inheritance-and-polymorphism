@@ -17,7 +17,7 @@ namespace ConsoleApp1
     interface ITeam
     {
         String TeamName { get; set; }
-        void AddPlayer(IPlayer p);
+        ITeam AddPlayer(IPlayer p);
         void GetPlayers();
     }
     //  sar putea de impartit in 2 interfete {ITeamAdd : ITeamGet}
@@ -33,7 +33,7 @@ namespace ConsoleApp1
 
     interface IGameAddTeam
     {
-        void AddTeam(ITeam team);
+        IGameAddTeam AddTeam(ITeam team);
     }
 
     interface ITwoTeamsGame: IGameShowInfo

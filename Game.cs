@@ -35,10 +35,10 @@ namespace ConsoleApp1
         List<IPlayer> player = new List<IPlayer>();
         public String TeamName { get; set; }
 
-        public void AddPlayer(IPlayer p)
+        public ITeam AddPlayer(IPlayer p)
         {
             player.Add(p);
-
+            return this;
         }
         public void GetPlayers()
         {
