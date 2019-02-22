@@ -53,20 +53,7 @@ namespace ConsoleApp1
         }
     }
 
-    public class BasketTeam : ITeam
-    {
-        public string TeamName { get; set => throw new NotImplementedException(); }
 
-        public ITeam AddPlayer(IPlayer p)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ShowPlayers()
-        {
-            throw new NotImplementedException();
-        }
-    }
 
 
 
