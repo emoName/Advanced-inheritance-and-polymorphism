@@ -19,7 +19,7 @@ namespace ConsoleApp1
         public String Name { get; set; }
         private int Age { get; set; }
         private int PowerPoints { get; set; }
-        public String StdPackage
+        public String GetStdPackage
         {
             get
             {
@@ -40,7 +40,7 @@ namespace ConsoleApp1
             player.Add(p);
             return this;
         }
-        public void GetPlayers()
+        public void ShowPlayers()
         {
             int i = 1;
             if (player.Count > 0)
@@ -53,14 +53,27 @@ namespace ConsoleApp1
         }
     }
 
+    public class BasketTeam : ITeam
+    {
+        public string TeamName { get; set => throw new NotImplementedException(); }
 
+        public ITeam AddPlayer(IPlayer p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowPlayers()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 
 
     class Basket : TwoTeamsGames
     {
 
-        public override void GameName()
+        public override void ShowGameName()
         {
             Console.WriteLine("This Game name Is : Basket : ");
         }
@@ -69,10 +82,10 @@ namespace ConsoleApp1
         public override void ShowPlayersAndTeams()
         {
             Console.WriteLine(teams[0].TeamName);
-            teams[0].GetPlayers();
+            teams[0].ShowPlayers();
 
             Console.WriteLine(teams[1].TeamName);
-            teams[1].GetPlayers();
+            teams[1].ShowPlayers();
         }
 
 
@@ -84,7 +97,7 @@ namespace ConsoleApp1
 
         //-----  Open Close ----- add Feature ------
 
-        public override void GameName()
+        public override void ShowGameName()
         {
             Console.WriteLine("This Game name Is : Fotball : ");
         }
@@ -99,7 +112,7 @@ namespace ConsoleApp1
 
     class SomeSinglePlayerGame  : SingePlayerGame
     {
-        public override void GameName()
+        public override void ShowGameName()
         {
             Console.WriteLine("This Game name Is : SomeSinglePlayerGame : ");
         }

@@ -1,4 +1,4 @@
-﻿using GameOopC_;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,8 +74,8 @@ namespace ConsoleApp1
         {
             foreach (var g in game)
             {
-                g.GameName();
-                Console.WriteLine(g.ShowOponent());
+                g.ShowGameName();
+                Console.WriteLine(g.GetOponent());
                 Console.WriteLine(g.GetScore());
                 Console.WriteLine();
             }
@@ -86,8 +86,8 @@ namespace ConsoleApp1
         {
             foreach (var g in game)
             {
-                g.GameName();
-                g.ShowOponent();
+                g.ShowGameName();
+                g.GetOponent();
                 g.ShowPlayersAndTeams();
                 Console.WriteLine();
             }
@@ -100,7 +100,7 @@ namespace ConsoleApp1
         //    //Liskov efect
         //    foreach (IGameShowInfo g in games)
         //    {
-        //        g.ShowOponent();
+        //        g.GetOponent();
         //        Console.WriteLine("\n -------------------------------------------------------- \n");
         //    }
         //}

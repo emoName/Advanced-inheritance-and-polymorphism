@@ -10,24 +10,24 @@ namespace ConsoleApp1
     // Incapsulare
     public interface IPlayer
     {
-        String Name { get; set; }
-        String StdPackage { get; }
+        string Name { get; set; }
+        String GetStdPackage { get; }
     }
 
     interface ITeam
     {
         String TeamName { get; set; }
         ITeam AddPlayer(IPlayer p);
-        void GetPlayers();
+        void ShowPlayers();
     }
     //  sar putea de impartit in 2 interfete {ITeamAdd : ITeamGet}
 
     interface IGameShowInfo
     {
-        void GameName();
+        void ShowGameName();
         String GetScore();
-        // String ShowOponent();
-        string ShowOponent();
+        // String GetOponent();
+        string GetOponent();
 
     }
 

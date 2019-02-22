@@ -12,10 +12,10 @@ namespace Game
   abstract  class SingePlayerGame : IGameShowInfo
     {
 
-       abstract public   void GameName();
+       abstract public   void ShowGameName();
         protected SingePlayerGame()
         {
-            score = 0;
+            score = 98;
 
         }
 
@@ -28,7 +28,7 @@ namespace Game
             return $"The score is : {score} ";
         }
 
-        public string ShowOponent()
+        public string GetOponent()
         {
             return $" {PlayerName}  VS PC";
         }
@@ -41,7 +41,7 @@ namespace Game
         protected int team2Score = 0;
         private int id = 0;
 
-        abstract public void GameName();
+        abstract public void ShowGameName();
         public virtual IGameAddTeam AddTeam(ITeam team)
         {
             if (id < 2)
@@ -62,7 +62,7 @@ namespace Game
             return $"Score is : | {teams[0].TeamName} : {team1Score} vs {teams[1].TeamName} : {team2Score}  |";
         }
 
-        public virtual string ShowOponent()
+        public virtual string GetOponent()
         {
             return $" {teams[0].TeamName} vs {teams[1].TeamName}";
         }
@@ -77,14 +77,14 @@ namespace Game
                 {
                     case 2:
                         Console.WriteLine(teams[0].TeamName);
-                        teams[0].GetPlayers();
+                        teams[0].ShowPlayers();
 
                         Console.WriteLine(teams[1].TeamName);
-                        teams[1].GetPlayers();
+                        teams[1].ShowPlayers();
                         break;
                     case 1:
                         Console.WriteLine(teams[0].TeamName);
-                        teams[0].GetPlayers();
+                        teams[0].ShowPlayers();
                         break;
                     default:
                         Console.WriteLine("Is no any Teams in Game !!!");
@@ -102,15 +102,6 @@ namespace Game
 
 
     }
-
-
-
-
-
-
-
-
-
 
 
 }
